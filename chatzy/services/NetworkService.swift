@@ -64,7 +64,6 @@ class NetworkService {
         switch httpResponse.statusCode {
         case 200...299:
             do {
-                print(String(data: data, encoding: .utf8) ?? "")
                 return try JSONDecoder().decode(T.self, from: data)
             } catch {
                 if let decodingError = error as? DecodingError {
