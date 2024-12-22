@@ -141,9 +141,19 @@ class SocketService {
     }
     
     func disconnect() {
+        // Leave all conversations
+        if let socket = socket {
+            socket.leaveNamespace()
+        }
+        
+        // Disconnect socket
         socket?.disconnect()
+        
+        // Clear socket and manager
         socket = nil
         manager = nil
+        
+        // Reset state
         isConnected = false
     }
     

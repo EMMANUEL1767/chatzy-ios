@@ -13,6 +13,11 @@ struct AuthView: View {
     var body: some View {
         NavigationView {
             VStack {
+                Image("chatzy")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 100, height: 100, alignment: .center)
+                    
                 Text("Chatzy")
                     .font(.largeTitle)
                     .fontWeight(.bold)

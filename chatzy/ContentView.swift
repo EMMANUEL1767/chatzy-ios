@@ -17,13 +17,18 @@ struct ContentView: View {
 
     var body: some View {
         ZStack(alignment: .top) {
-            if authViewModel.isAuthenticated {
-                ConversationsView()
-                    .environmentObject(authViewModel)
+            if !authViewModel.checkingForLoggedInUser {
+                if authViewModel.isAuthenticated {
+                    ConversationsView()
+                        .environmentObject(authViewModel)
+                } else {
+                    AuthView()
+                        .environmentObject(authViewModel)
+                }
             } else {
-                AuthView()
-                    .environmentObject(authViewModel)
+                AppProgressView()
             }
+            
             NetworkStatusView()
                 .animation(.default, value: networkMonitor.isConnected)
         }

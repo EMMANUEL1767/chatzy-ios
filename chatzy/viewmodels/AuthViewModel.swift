@@ -6,6 +6,7 @@ class AuthViewModel: ObservableObject {
     @Published var currentUser: User?
     @Published var error: String?
     @Published var isLoading = false
+    @Published var checkingForLoggedInUser = true
     
     private let networkService = NetworkService.shared
     private let socketService = SocketService.shared
@@ -20,6 +21,8 @@ class AuthViewModel: ObservableObject {
         if let token = UserDefaults.standard.authToken {
             networkService.setAuthToken(token)
             loadSavedUser()
+        } else {
+            checkingForLoggedInUser = false
         }
     }
     
@@ -30,9 +33,11 @@ class AuthViewModel: ObservableObject {
                     let user: User = try await networkService.request("/users/\(userId)")
                     self.currentUser = user
                     self.isAuthenticated = true
+                    checkingForLoggedInUser = false
                     socketService.connect(token: UserDefaults.standard.authToken ?? "")
                 } catch {
                     self.logout()
+                    checkingForLoggedInUser = false
                 }
             }
         }
@@ -64,8 +69,17 @@ class AuthViewModel: ObservableObject {
     }
     
     func logout() {
-        UserDefaults.standard.clearAuthData()
+        // Disconnect socket
         socketService.disconnect()
+        
+        // Clear Core Data
+        CoreDataManager.shared.clearAllData()
+        
+        // Clear UserDefaults
+        UserDefaults.standard.clearAuthData()
+        UserDefaults.standard.synchronize()
+        
+        // Clear authentication state
         isAuthenticated = false
         currentUser = nil
     }

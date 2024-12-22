@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MessageBubble: View {
     let message: Message
+    let type: ConversationType
     @EnvironmentObject var authViewModel: AuthViewModel
     
     private var isCurrentUser: Bool {
@@ -19,14 +20,13 @@ struct MessageBubble: View {
         HStack {
             if isCurrentUser { Spacer() }
             VStack(alignment: isCurrentUser ? .trailing : .leading, spacing: 12) {
-                if !isCurrentUser {
+                if !isCurrentUser && type == .group {
                     Text(message.senderName)
                         .font(.caption)
                         .fontWeight(.semibold)
                         .foregroundColor(.gray)
                 }
                 VStack(alignment: isCurrentUser ? .trailing : .leading, spacing: 6) {
-                    
                     
                     Text(message.content)
                     
@@ -89,6 +89,6 @@ struct MessageBubble: View {
 }
 
 #Preview {
-    MessageBubble(message: Message(id: 1, conversationId: 1, senderId: 1, content: "test message", status: .delivered, createdAt: "", senderName: "Rahul"))
+    MessageBubble(message: Message(id: 1, conversationId: 1, senderId: 1, content: "test message", status: .delivered, createdAt: "", senderName: "Rahul"), type: .direct)
         .environmentObject(AuthViewModel())
 }

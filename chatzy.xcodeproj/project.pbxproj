@@ -34,6 +34,8 @@
 		3AF48C622D17AF2400D95D48 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF48C612D17AF2400D95D48 /* CoreDataManager.swift */; };
 		3AF48C672D181FCA00D95D48 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF48C662D181FCA00D95D48 /* NetworkMonitor.swift */; };
 		3AF48C692D18200C00D95D48 /* NetworkStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF48C682D18200C00D95D48 /* NetworkStatusView.swift */; };
+		3AF48C6E2D18594100D95D48 /* AppProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF48C6D2D18594100D95D48 /* AppProgressView.swift */; };
+		3AF48C702D186B3E00D95D48 /* SelectedUserBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF48C6F2D186B3E00D95D48 /* SelectedUserBubble.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +68,8 @@
 		3AF48C662D181FCA00D95D48 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		3AF48C682D18200C00D95D48 /* NetworkStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatusView.swift; sourceTree = "<group>"; };
 		3AF48C6C2D18519A00D95D48 /* Documentation.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Documentation.md; sourceTree = "<group>"; };
+		3AF48C6D2D18594100D95D48 /* AppProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppProgressView.swift; sourceTree = "<group>"; };
+		3AF48C6F2D186B3E00D95D48 /* SelectedUserBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedUserBubble.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +194,8 @@
 				3ABB95182D16E9FB000D6142 /* MessageBubble.swift */,
 				3ABB951A2D16EA21000D6142 /* ConversationRow.swift */,
 				3AF48C682D18200C00D95D48 /* NetworkStatusView.swift */,
+				3AF48C6D2D18594100D95D48 /* AppProgressView.swift */,
+				3AF48C6F2D186B3E00D95D48 /* SelectedUserBubble.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -312,9 +318,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3ABB95072D16E527000D6142 /* AuthViewModel.swift in Sources */,
+				3AF48C6E2D18594100D95D48 /* AppProgressView.swift in Sources */,
 				3ABB95232D1710BF000D6142 /* NewConversationsView.swift in Sources */,
 				3ABB94E62D16E2B4000D6142 /* ContentView.swift in Sources */,
 				3AF48C692D18200C00D95D48 /* NetworkStatusView.swift in Sources */,
+				3AF48C702D186B3E00D95D48 /* SelectedUserBubble.swift in Sources */,
 				3ABB95112D16E93B000D6142 /* RegisterView.swift in Sources */,
 				3ABB95032D16E43E000D6142 /* ChatViewModel.swift in Sources */,
 				3AF48C622D17AF2400D95D48 /* CoreDataManager.swift in Sources */,

@@ -14,28 +14,33 @@ struct ConversationsView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                if viewModel.conversations.isEmpty {
-                    Text("No conversations yet. Start making friends.")
-                    Button {
-                        showingNewConversation = true
-                    } label: {
-                        Text("Start Now")
-                            .font(.title3)
-                            .fontWeight(.semibold)
-                    }
-
-                } else {
-                    List {
-                        ForEach(viewModel.conversations) { conversation in
-                            NavigationLink {
-                                ChatDetailView(conversation: conversation)
-                                    .environmentObject(viewModel)
-                            } label: {
-                                ConversationRow(conversation: conversation)
+            ZStack {
+                VStack {
+                    
+                    if viewModel.conversations.isEmpty {
+                        Text("No conversations yet. Start making friends.")
+                        Button {
+                            showingNewConversation = true
+                        } label: {
+                            Text("Start Now")
+                                .font(.title3)
+                                .fontWeight(.semibold)
+                        }
+                    } else {
+                        List {
+                            ForEach(viewModel.conversations) { conversation in
+                                NavigationLink {
+                                    ChatDetailView(conversation: conversation)
+                                        .environmentObject(viewModel)
+                                } label: {
+                                    ConversationRow(conversation: conversation)
+                                }
                             }
                         }
                     }
+                }
+                if viewModel.isLoading {
+                    AppProgressView()
                 }
             }
             .navigationTitle("Chats")

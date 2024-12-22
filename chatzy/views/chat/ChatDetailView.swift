@@ -14,36 +14,42 @@ struct ChatDetailView: View {
     @FocusState private var isFocused: Bool
     
     var body: some View {
-        VStack {
-            ScrollViewReader { proxy in
-                ScrollView {
-                    LazyVStack(spacing: 12) {
-                        ForEach(viewModel.currentMessages) { message in
-                            MessageBubble(message: message)
-                                .id(message.id)
+        ZStack {
+            VStack {
+                ScrollViewReader { proxy in
+                    ScrollView {
+                        LazyVStack(spacing: 12) {
+                            ForEach(viewModel.currentMessages) { message in
+                                MessageBubble(message: message, type: conversation.type)
+                                    .id(message.id)
+                            }
+                        }
+                        .padding()
+                    }
+                    .onChange(of: viewModel.currentMessages) { _ in
+                        withAnimation {
+                            proxy.scrollTo(viewModel.currentMessages.last?.id)
                         }
                     }
-                    .padding()
                 }
-                .onChange(of: viewModel.currentMessages) { _ in
-                    withAnimation {
-                        proxy.scrollTo(viewModel.currentMessages.last?.id)
+                
+                HStack {
+                    TextField("Message", text: $messageText)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .focused($isFocused)
+                    
+                    Button(action: {
+                        Task { await sendMessage() }
+                    }) {
+                        Image(systemName: "paperplane.fill")
                     }
                 }
-            }
-            
-            HStack {
-                TextField("Message", text: $messageText)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .focused($isFocused)
+                .padding()
                 
-                Button(action: {
-                    Task { await sendMessage() }
-                }) {
-                    Image(systemName: "paperplane.fill")
-                }
             }
-            .padding()
+            if viewModel.isLoading {
+                AppProgressView()
+            }
         }
         .navigationTitle(conversation.displayName)
         .task {
@@ -51,6 +57,11 @@ struct ChatDetailView: View {
         }
         .onChange(of: isFocused) { focused in
             viewModel.updateTypingStatus(isTyping: focused)
+        }
+        .onDisappear {
+            Task {
+                await viewModel.loadConversations()
+            }
         }
     }
     

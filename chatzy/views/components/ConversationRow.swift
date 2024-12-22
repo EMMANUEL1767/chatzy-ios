@@ -11,30 +11,54 @@ struct ConversationRow: View {
     let conversation: Conversation
     
     var body: some View {
-        VStack(alignment: .leading) {
-            HStack {
-                Text(conversation.displayName)
-                    .font(.headline)
-                Spacer()
-                if (conversation.unreadCount ?? 0) > 0 {
-                    Text("\(conversation.unreadCount ?? 0)")
-                        .foregroundColor(.white)
-                        .padding(6)
-                        .background(Color.blue)
-                        .clipShape(Circle())
-                }
-            }
+        HStack {
+            Image(systemName: conversation.type == .direct ? "person.circle.fill" : "person.2.circle.fill")
+                .font(.largeTitle)
+                .fontWeight(.semibold)
             
-            if let lastMessage = conversation.lastMessage {
-                Text(lastMessage)
-                    .font(.subheadline)
-                    .foregroundColor(.gray)
-                    .lineLimit(1)
-            } else {
-                Text("Send \"Hi\" to start a conversation")
-                    .font(.subheadline)
-                    .foregroundColor(.gray)
-                    .lineLimit(1)
+            VStack(alignment: .leading) {
+                HStack {
+                    Text(conversation.displayName)
+                        .font(.headline)
+                    Spacer()
+                    if (conversation.unreadCount ?? 0) > 0 {
+                        Text("\(conversation.unreadCount ?? 0)")
+                            .foregroundColor(.white)
+                            .padding(6)
+                            .background(Color.blue)
+                            .clipShape(Circle())
+                    }
+                }
+                
+                if let lastMessage = conversation.lastMessage {
+                    HStack(spacing: .zero) {
+                        if let senderName = conversation.lastMessageSenderName, UserDefaults.standard.userId != conversation.lastMessageSenderId, conversation.type == .group  {
+                            Text("\(senderName): ")
+                                .font(.subheadline)
+                                .foregroundColor(.gray)
+                                .lineLimit(1)
+                        }
+                        
+                        Text(lastMessage)
+                            .font(.subheadline)
+                            .foregroundColor(.gray)
+                            .lineLimit(1)
+                        
+                        Spacer()
+                        
+                        if let time = conversation.lastMessageTime {
+                            Text(DateUtils.getDate(from: time)?.formatMessageTime() ?? "")
+                                .font(.subheadline)
+                                .foregroundColor(.gray)
+                                .lineLimit(1)
+                        }
+                    }
+                } else {
+                    Text("Send \"Hi\" to start a conversation")
+                        .font(.subheadline)
+                        .foregroundColor(.gray)
+                        .lineLimit(1)
+                }
             }
         }
         .padding(.vertical, 4)

@@ -164,4 +164,30 @@ class CoreDataManager {
         fetchRequest.fetchLimit = limit
         return try viewContext.fetch(fetchRequest)
     }
+    
+    func clearAllData() {
+        let context = viewContext
+        let entities = persistentContainer.managedObjectModel.entities
+        
+        entities.forEach { entity in
+            let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: entity.name!)
+            let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+            
+            do {
+                try context.execute(deleteRequest)
+            } catch {
+                print("Error clearing entity \(entity.name!): \(error)")
+            }
+        }
+        
+        // Reset the context
+        context.reset()
+        
+        // Save changes
+        do {
+            try context.save()
+        } catch {
+            print("Error saving context after clear: \(error)")
+        }
+    }
 }

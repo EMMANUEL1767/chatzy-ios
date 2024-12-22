@@ -117,15 +117,18 @@ struct NewConversationsView: View {
             }
             .overlay {
                 if isLoading {
-                    ProgressView()
-                        .background(Color.black.opacity(0.2))
+                    AppProgressView()                }
+            }
+            .onChange(of: conversationType) { oldValue, newValue in
+                if oldValue != newValue {
+                    selectedUsers = []
                 }
             }
         }
     }
     
     private var canCreateConversation: Bool {
-        if conversationType == .direct {
+        if conversationType == .direct, viewModel.conversations.filter({ $0.participants.contains(where: { $0.id == selectedUsers.first?.id }) }).isEmpty {
             return selectedUsers.count == 1
         } else {
             return !selectedUsers.isEmpty && !name.isEmpty
@@ -177,61 +180,7 @@ struct NewConversationsView: View {
     }
 }
 
-// Helper Views
-struct SelectedUserBubble: View {
-    let user: User
-    let onRemove: () -> Void
-    
-    var body: some View {
-        HStack {
-            Text(user.username)
-                .font(.subheadline)
-            
-            Button(action: onRemove) {
-                Image(systemName: "xmark.circle.fill")
-                    .foregroundColor(.gray)
-            }
-        }
-        .padding(.horizontal, 12)
-        .padding(.vertical, 6)
-        .background(
-            Capsule()
-                .fill(Color.gray.opacity(0.2))
-        )
-    }
-}
 
-struct UserRow: View {
-    let user: User
-    let isSelected: Bool
-    let onTap: () -> Void
-    
-    var body: some View {
-        HStack {
-            // User Avatar (you can add an avatar image here)
-            Circle()
-                .fill(Color.gray.opacity(0.3))
-                .frame(width: 40, height: 40)
-            
-            VStack(alignment: .leading) {
-                Text(user.username)
-                    .font(.headline)
-                Text(user.email)
-                    .font(.subheadline)
-                    .foregroundColor(.gray)
-            }
-            
-            Spacer()
-            
-            if isSelected {
-                Image(systemName: "checkmark.circle.fill")
-                    .foregroundColor(.blue)
-            }
-        }
-        .contentShape(Rectangle())
-        .onTapGesture(perform: onTap)
-    }
-}
 
 #Preview {
     NewConversationsView()
