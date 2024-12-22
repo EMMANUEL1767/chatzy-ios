@@ -7,187 +7,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DD027CB5-9FB2-4480-9E90-43C01738E22F"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "chatzy/viewmodels/AuthViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "register(username:email:password:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "DD027CB5-9FB2-4480-9E90-43C01738E22F - add33ca4a0d06761"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for chatzy.AuthViewModel.register(username: Swift.String, email: Swift.String, password: Swift.String) async -&gt; ()"
-                  moduleName = "chatzy"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/emmanuelbiju/Documents/GitHub/chatzy/chatzy/viewmodels/AuthViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "47"
-                  endingLineNumber = "47"
-                  offsetFromSymbolStart = "200">
-               </Location>
-               <Location
-                  uuid = "DD027CB5-9FB2-4480-9E90-43C01738E22F - f8ec4ddbdb6eca8b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(2) await resume partial function for chatzy.AuthViewModel.register(username: Swift.String, email: Swift.String, password: Swift.String) async -&gt; ()"
-                  moduleName = "chatzy"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/emmanuelbiju/Documents/GitHub/chatzy/chatzy/viewmodels/AuthViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "47"
-                  endingLineNumber = "47"
-                  offsetFromSymbolStart = "36">
-               </Location>
-               <Location
-                  uuid = "DD027CB5-9FB2-4480-9E90-43C01738E22F - def3b95a7e7722c0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for chatzy.AuthViewModel.register(username: Swift.String, email: Swift.String, password: Swift.String) async -&gt; ()"
-                  moduleName = "chatzy"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/emmanuelbiju/Documents/GitHub/chatzy/chatzy/viewmodels/AuthViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "50"
-                  endingLineNumber = "50"
-                  offsetFromSymbolStart = "52">
-               </Location>
-               <Location
-                  uuid = "DD027CB5-9FB2-4480-9E90-43C01738E22F - 7660746128da40c1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for chatzy.AuthViewModel.register(username: Swift.String, email: Swift.String, password: Swift.String) async -&gt; ()"
-                  moduleName = "chatzy"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/emmanuelbiju/Documents/GitHub/chatzy/chatzy/viewmodels/AuthViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "50"
-                  endingLineNumber = "50"
-                  offsetFromSymbolStart = "68">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B1FE1FA8-C0DF-4B06-81E8-1F8FC1F14E07"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "chatzy/viewmodels/AuthViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "login(email:password:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "B1FE1FA8-C0DF-4B06-81E8-1F8FC1F14E07 - 80ab158e5081d7b9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for chatzy.AuthViewModel.login(email: Swift.String, password: Swift.String) async -&gt; ()"
-                  moduleName = "chatzy"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/emmanuelbiju/Documents/GitHub/chatzy/chatzy/viewmodels/AuthViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "176">
-               </Location>
-               <Location
-                  uuid = "B1FE1FA8-C0DF-4B06-81E8-1F8FC1F14E07 - 803d3d8575a0f661"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(2) await resume partial function for chatzy.AuthViewModel.login(email: Swift.String, password: Swift.String) async -&gt; ()"
-                  moduleName = "chatzy"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/emmanuelbiju/Documents/GitHub/chatzy/chatzy/viewmodels/AuthViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "36">
-               </Location>
-               <Location
-                  uuid = "B1FE1FA8-C0DF-4B06-81E8-1F8FC1F14E07 - c34d43f2fe589818"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for chatzy.AuthViewModel.login(email: Swift.String, password: Swift.String) async -&gt; ()"
-                  moduleName = "chatzy"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/emmanuelbiju/Documents/GitHub/chatzy/chatzy/viewmodels/AuthViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "44">
-               </Location>
-               <Location
-                  uuid = "B1FE1FA8-C0DF-4B06-81E8-1F8FC1F14E07 - 65f068f1314c3a19"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for chatzy.AuthViewModel.login(email: Swift.String, password: Swift.String) async -&gt; ()"
-                  moduleName = "chatzy"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/emmanuelbiju/Documents/GitHub/chatzy/chatzy/viewmodels/AuthViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "60">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "90D86E15-937F-41F2-81EC-3AAECBFFBAEC"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "chatzy/viewmodels/AuthViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "login(email:password:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "82085C82-A148-4B65-8ADB-4CEACC04C779"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "chatzy/services/NetworkService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "request(_:method:body:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -196,7 +24,23 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "B7D63F92-55B3-42BD-A13D-5FA34D9AA93B"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "chatzy/services/NetworkService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "request(_:method:body:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "96809B61-5523-42F0-B0F2-28105ABA3F19"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "chatzy/services/NetworkService.swift"
@@ -206,52 +50,20 @@
             endingLineNumber = "89"
             landmarkName = "request(_:method:body:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "B7D63F92-55B3-42BD-A13D-5FA34D9AA93B - dd46c34f6946c2b4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "chatzy.SocketService.deinit"
-                  moduleName = "chatzy"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/emmanuelbiju/Documents/GitHub/chatzy/chatzy/services/NetworkService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "20">
-               </Location>
-               <Location
-                  uuid = "B7D63F92-55B3-42BD-A13D-5FA34D9AA93B - 3eaab8223e9852a1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "chatzy.SocketService.__deallocating_deinit"
-                  moduleName = "chatzy"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/emmanuelbiju/Documents/GitHub/chatzy/chatzy/services/NetworkService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "16">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "96809B61-5523-42F0-B0F2-28105ABA3F19"
-            shouldBeEnabled = "Yes"
+            uuid = "BA0861DB-3A80-4808-9B13-BB44DDCC8C35"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "chatzy/services/NetworkService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
             landmarkName = "request(_:method:body:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -259,16 +71,667 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "BA0861DB-3A80-4808-9B13-BB44DDCC8C35"
-            shouldBeEnabled = "Yes"
+            uuid = "0B72C425-0D1F-459A-9C80-8C8C54D9B262"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "chatzy/services/NetworkService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "request(_:method:body:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C537102C-F9B4-45C1-A9C1-4EE1D008936C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "chatzy/services/NetworkService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "request(_:method:body:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B683A776-AE70-4A7A-9682-93DA7CA8325B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "chatzy/viewmodels/AuthViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "loadSavedUser()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EDBDCDD3-938E-408B-BCBC-83EC32C6C2EC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "chatzy/viewmodels/AuthViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "login(email:password:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "364E6339-EF96-4300-88B5-6E841F5091F5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "chatzy/viewmodels/AuthViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "login(email:password:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "35BBE739-D92D-4537-AECC-44157CC951F4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "chatzy/viewmodels/AuthViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "login(email:password:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A88EC62E-57E6-4DCD-AC96-4E42023621E8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "chatzy/viewmodels/AuthViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "login(email:password:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DBF95B02-7661-46D7-B9E5-641980E36C96"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "chatzy/services/SocketService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "227"
+            endingLineNumber = "227"
+            landmarkName = "handleTypingStatus(_:isTyping:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C0C4FF2B-6446-4EC2-99C8-D1292E9BDFA6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "chatzy/viewmodels/AuthViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "init()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1003ABAC-A694-4FAC-9749-70E650931432"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "chatzy/viewmodels/AuthViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "init()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "052520C0-C13D-4A57-B2F5-6A4CA1357733"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "chatzy/viewmodels/ChatViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "loadConversations()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2D5CDA08-3569-4CF3-A962-31F5949804CB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "chatzy/viewmodels/ChatViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "loadConversations()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FECB183A-3AA5-4448-8BD9-2D19997F595C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "chatzy/viewmodels/ChatViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "loadConversations()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B03DD03A-AC45-41AA-AEFB-88A50BACE245"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "chatzy/viewmodels/ChatViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "loadConversations()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "107A819D-1443-404F-BBA1-2F0ECF5226CB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "chatzy/persistence/CoreDataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "createOrUpdateConversation(from:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F578B7A2-44CE-42D6-99E2-44DB50E87ACF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "chatzy/persistence/CoreDataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "createOrUpdateConversation(from:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C6E66E50-B0B4-43A9-8F6C-F7CCF398FC82"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "chatzy/persistence/CoreDataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "createOrUpdateConversation(from:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C6E66E50-B0B4-43A9-8F6C-F7CCF398FC82 - e6f493c0a435819b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "chatzy.CoreDataManager.createOrUpdateConversation(from: chatzy.Conversation) throws -&gt; __C.NSManagedObject"
+                  moduleName = "chatzy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emmanuelbiju/Documents/GitHub/chatzy/chatzy/persistence/CoreDataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "400">
+               </Location>
+               <Location
+                  uuid = "C6E66E50-B0B4-43A9-8F6C-F7CCF398FC82 - e6f493c0a435819b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "chatzy.CoreDataManager.createOrUpdateConversation(from: chatzy.Conversation) throws -&gt; __C.NSManagedObject"
+                  moduleName = "chatzy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emmanuelbiju/Documents/GitHub/chatzy/chatzy/persistence/CoreDataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "2456">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "51F829F6-AFE4-4169-8BE5-9937387E6D71"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "chatzy/viewmodels/ChatViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "setupNotificationObservers()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "08A595F0-4FD6-405F-8482-F617D87BAEDB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "chatzy/services/SocketService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "219"
+            endingLineNumber = "219"
+            landmarkName = "handleMessageStatus(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F9322706-9137-4C06-8359-08C42D8772A1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "chatzy/services/SocketService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "setupEventHandlers()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "62B5C505-4BCB-4BC5-BEAF-0EBD27DF7967"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "chatzy/viewmodels/ChatViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
+            landmarkName = "sendMessage(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "62B5C505-4BCB-4BC5-BEAF-0EBD27DF7967 - 52f32c07ccae0efe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for chatzy.ChatViewModel.sendMessage(Swift.String) async -&gt; ()"
+                  moduleName = "chatzy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emmanuelbiju/Documents/GitHub/chatzy/chatzy/viewmodels/ChatViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "154"
+                  endingLineNumber = "154"
+                  offsetFromSymbolStart = "452">
+               </Location>
+               <Location
+                  uuid = "62B5C505-4BCB-4BC5-BEAF-0EBD27DF7967 - 52f32c07ccae0efe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for chatzy.ChatViewModel.sendMessage(Swift.String) async -&gt; ()"
+                  moduleName = "chatzy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emmanuelbiju/Documents/GitHub/chatzy/chatzy/viewmodels/ChatViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "154"
+                  endingLineNumber = "154"
+                  offsetFromSymbolStart = "436">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "58F4F038-C353-48A5-B1DD-DFFCC9CD1D2F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "chatzy/viewmodels/ChatViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
+            landmarkName = "sendMessage(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "58F4F038-C353-48A5-B1DD-DFFCC9CD1D2F - 52f32c07ccae0edf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for chatzy.ChatViewModel.sendMessage(Swift.String) async -&gt; ()"
+                  moduleName = "chatzy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emmanuelbiju/Documents/GitHub/chatzy/chatzy/viewmodels/ChatViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "153"
+                  endingLineNumber = "153"
+                  offsetFromSymbolStart = "204">
+               </Location>
+               <Location
+                  uuid = "58F4F038-C353-48A5-B1DD-DFFCC9CD1D2F - a7856dc54ec30fbe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (chatzy.Message) -&gt; Swift.Bool in chatzy.ChatViewModel.sendMessage(Swift.String) async -&gt; ()"
+                  moduleName = "chatzy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emmanuelbiju/Documents/GitHub/chatzy/chatzy/viewmodels/ChatViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "153"
+                  endingLineNumber = "153"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "58F4F038-C353-48A5-B1DD-DFFCC9CD1D2F - 52f32c07ccae0edf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for chatzy.ChatViewModel.sendMessage(Swift.String) async -&gt; ()"
+                  moduleName = "chatzy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emmanuelbiju/Documents/GitHub/chatzy/chatzy/viewmodels/ChatViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "153"
+                  endingLineNumber = "153"
+                  offsetFromSymbolStart = "156">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "40FA81DE-B9D1-4D8B-A542-861665E34F36"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "chatzy/viewmodels/ChatViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
+            landmarkName = "sendMessage(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F38C3744-0882-4C10-A925-670034F62739"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "chatzy/viewmodels/ChatViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "158"
+            endingLineNumber = "158"
+            landmarkName = "sendMessage(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F38C3744-0882-4C10-A925-670034F62739 - 52f32c07ccae0f95"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for chatzy.ChatViewModel.sendMessage(Swift.String) async -&gt; ()"
+                  moduleName = "chatzy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emmanuelbiju/Documents/GitHub/chatzy/chatzy/viewmodels/ChatViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "159"
+                  endingLineNumber = "159"
+                  offsetFromSymbolStart = "532">
+               </Location>
+               <Location
+                  uuid = "F38C3744-0882-4C10-A925-670034F62739 - bfa8a6bf6e4f3598"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for chatzy.ChatViewModel.sendMessage(Swift.String) async -&gt; ()"
+                  moduleName = "chatzy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emmanuelbiju/Documents/GitHub/chatzy/chatzy/viewmodels/ChatViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "159"
+                  endingLineNumber = "159"
+                  offsetFromSymbolStart = "168">
+               </Location>
+               <Location
+                  uuid = "F38C3744-0882-4C10-A925-670034F62739 - 52f32c07ccae0f7a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for chatzy.ChatViewModel.sendMessage(Swift.String) async -&gt; ()"
+                  moduleName = "chatzy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emmanuelbiju/Documents/GitHub/chatzy/chatzy/viewmodels/ChatViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "158"
+                  endingLineNumber = "158"
+                  offsetFromSymbolStart = "580">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "11976D15-DFC7-44F5-9BA2-ECFE0D790576"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "chatzy/viewmodels/ChatViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
+            landmarkName = "sendMessage(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "11976D15-DFC7-44F5-9BA2-ECFE0D790576 - 6c443b480a6dba1f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for chatzy.ChatViewModel.sendMessage(Swift.String) async -&gt; ()"
+                  moduleName = "chatzy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emmanuelbiju/Documents/GitHub/chatzy/chatzy/viewmodels/ChatViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "147"
+                  endingLineNumber = "147"
+                  offsetFromSymbolStart = "1412">
+               </Location>
+               <Location
+                  uuid = "11976D15-DFC7-44F5-9BA2-ECFE0D790576 - 5caca8e8baeadc3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for chatzy.ChatViewModel.sendMessage(Swift.String) async -&gt; ()"
+                  moduleName = "chatzy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emmanuelbiju/Documents/GitHub/chatzy/chatzy/viewmodels/ChatViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "147"
+                  endingLineNumber = "147"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "11976D15-DFC7-44F5-9BA2-ECFE0D790576 - 52f32c07ccae0e01"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for chatzy.ChatViewModel.sendMessage(Swift.String) async -&gt; ()"
+                  moduleName = "chatzy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emmanuelbiju/Documents/GitHub/chatzy/chatzy/viewmodels/ChatViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "147"
+                  endingLineNumber = "147"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "11976D15-DFC7-44F5-9BA2-ECFE0D790576 - bfa8a6bf6e4f340c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for chatzy.ChatViewModel.sendMessage(Swift.String) async -&gt; ()"
+                  moduleName = "chatzy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emmanuelbiju/Documents/GitHub/chatzy/chatzy/viewmodels/ChatViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "147"
+                  endingLineNumber = "147"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  uuid = "11976D15-DFC7-44F5-9BA2-ECFE0D790576 - 52f32c07ccae0e01"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for chatzy.ChatViewModel.sendMessage(Swift.String) async -&gt; ()"
+                  moduleName = "chatzy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emmanuelbiju/Documents/GitHub/chatzy/chatzy/viewmodels/ChatViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "147"
+                  endingLineNumber = "147"
+                  offsetFromSymbolStart = "144">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B453C43A-26CF-48AC-BF87-03B09607C927"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "chatzy/viewmodels/ChatViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
+            landmarkName = "sendMessage(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "02F49791-D48D-4833-853C-B6B23FED42D6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "chatzy/viewmodels/ChatViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
+            landmarkName = "sendMessage(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

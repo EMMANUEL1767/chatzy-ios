@@ -7,14 +7,10 @@
 
 import Foundation
 
-// Services/Constants.swift
 enum Constants {
     static let baseURL = "https://58b5-157-46-1-45.ngrok-free.app/api"
     static let socketURL = "https://58b5-157-46-1-45.ngrok-free.app"
 }
-
-// Services/NetworkService.swift
-import Foundation
 
 enum NetworkError: Error {
     case invalidURL
@@ -23,6 +19,7 @@ enum NetworkError: Error {
     case decodingError
     case serverError(String)
     case unknown
+    case notConnected
 }
 
 class NetworkService {
@@ -67,6 +64,7 @@ class NetworkService {
         switch httpResponse.statusCode {
         case 200...299:
             do {
+                print(String(data: data, encoding: .utf8) ?? "")
                 return try JSONDecoder().decode(T.self, from: data)
             } catch {
                 if let decodingError = error as? DecodingError {
@@ -96,85 +94,11 @@ class NetworkService {
     }
 }
 
-// Services/SocketService.swift
-import Foundation
-import SocketIO
-
-class SocketService: ObservableObject {
-    static let shared = SocketService()
-    
-    private var manager: SocketManager?
-    private var socket: SocketIOClient?
-    
-    @Published var isConnected = false
-    
-    private init() {}
-    
-    func connect(token: String) {
-        let config: SocketIOClientConfiguration = [
-            .extraHeaders(["Authorization": "Bearer \(token)"]),
-            .log(true),
-            .compress
-        ]
-        
-        manager = SocketManager(socketURL: URL(string: Constants.socketURL)!, config: config)
-        socket = manager?.defaultSocket
-        
-        setupEventHandlers()
-        socket?.connect()
-    }
-    
-    func disconnect() {
-        socket?.disconnect()
-        socket = nil
-        manager = nil
-        isConnected = false
-    }
-    
-    private func setupEventHandlers() {
-        socket?.on(clientEvent: .connect) { [weak self] _, _ in
-            self?.isConnected = true
-        }
-        
-        socket?.on(clientEvent: .disconnect) { [weak self] _, _ in
-            self?.isConnected = false
-        }
-        
-        socket?.on("new_message") { data, _ in
-            guard let messageData = data.first as? [String: Any] else { return }
-            NotificationCenter.default.post(
-                name: .newMessageReceived,
-                object: nil,
-                userInfo: ["messageData": messageData]
-            )
-        }
-    }
-    
-    func joinConversation(_ conversationId: Int) {
-        socket?.emit("join_conversation", conversationId)
-    }
-    
-    func leaveConversation(_ conversationId: Int) {
-        socket?.emit("leave_conversation", conversationId)
-    }
-    
-    func sendMessage(_ message: [String: Any], completion: @escaping (Error?) -> Void) {
-        socket?.emit("send_message", message) {
-            completion(nil)
-        }
-    }
-    
-    func startTyping(in conversationId: Int) {
-        socket?.emit("typing_start", conversationId)
-    }
-    
-    func stopTyping(in conversationId: Int) {
-        socket?.emit("typing_stop", conversationId)
-    }
-}
 
 extension Notification.Name {
     static let newMessageReceived = Notification.Name("newMessageReceived")
     static let messageStatusUpdated = Notification.Name("messageStatusUpdated")
     static let typingStatusChanged = Notification.Name("typingStatusChanged")
+    static let messageError = Notification.Name("messageError")
+    static let messageSent = Notification.Name("messageSent")
 }

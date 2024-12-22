@@ -11,15 +11,12 @@
 		3ABB94E62D16E2B4000D6142 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABB94E52D16E2B4000D6142 /* ContentView.swift */; };
 		3ABB94E82D16E2B5000D6142 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ABB94E72D16E2B5000D6142 /* Assets.xcassets */; };
 		3ABB94EB2D16E2B5000D6142 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ABB94EA2D16E2B5000D6142 /* Preview Assets.xcassets */; };
-		3ABB94ED2D16E2B5000D6142 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABB94EC2D16E2B5000D6142 /* Persistence.swift */; };
-		3ABB94F02D16E2B5000D6142 /* chatzy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3ABB94EE2D16E2B5000D6142 /* chatzy.xcdatamodeld */; };
 		3ABB94F82D16E332000D6142 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABB94F72D16E332000D6142 /* User.swift */; };
 		3ABB94FB2D16E371000D6142 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABB94FA2D16E371000D6142 /* NetworkService.swift */; };
 		3ABB94FE2D16E3E0000D6142 /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = 3ABB94FD2D16E3E0000D6142 /* SocketIO */; };
-		3ABB95002D16E40C000D6142 /* SocketIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABB94FF2D16E40C000D6142 /* SocketIOManager.swift */; };
+		3ABB95002D16E40C000D6142 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABB94FF2D16E40C000D6142 /* SocketService.swift */; };
 		3ABB95032D16E43E000D6142 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABB95022D16E43E000D6142 /* ChatViewModel.swift */; };
 		3ABB95072D16E527000D6142 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABB95062D16E527000D6142 /* AuthViewModel.swift */; };
-		3ABB95092D16E58D000D6142 /* WebSocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABB95082D16E58D000D6142 /* WebSocketService.swift */; };
 		3ABB950D2D16E8EA000D6142 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABB950C2D16E8EA000D6142 /* AuthView.swift */; };
 		3ABB950F2D16E92A000D6142 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABB950E2D16E92A000D6142 /* LoginView.swift */; };
 		3ABB95112D16E93B000D6142 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABB95102D16E93B000D6142 /* RegisterView.swift */; };
@@ -27,6 +24,16 @@
 		3ABB95162D16E9C4000D6142 /* ChatDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABB95152D16E9C4000D6142 /* ChatDetailView.swift */; };
 		3ABB95192D16E9FB000D6142 /* MessageBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABB95182D16E9FB000D6142 /* MessageBubble.swift */; };
 		3ABB951B2D16EA22000D6142 /* ConversationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABB951A2D16EA21000D6142 /* ConversationRow.swift */; };
+		3ABB951D2D170BEE000D6142 /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABB951C2D170BEE000D6142 /* Conversation.swift */; };
+		3ABB951F2D170C1F000D6142 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABB951E2D170C1F000D6142 /* Message.swift */; };
+		3ABB95212D170C4F000D6142 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABB95202D170C4F000D6142 /* ApiResponse.swift */; };
+		3ABB95232D1710BF000D6142 /* NewConversationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABB95222D1710BF000D6142 /* NewConversationsView.swift */; };
+		3ABB95262D1721B6000D6142 /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABB95252D1721B6000D6142 /* UserDefaults+Extension.swift */; };
+		3AF48C5C2D17397800D95D48 /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF48C5B2D17397800D95D48 /* Date+Utils.swift */; };
+		3AF48C5F2D17A90600D95D48 /* ChatzyApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3AF48C5D2D17A90600D95D48 /* ChatzyApp.xcdatamodeld */; };
+		3AF48C622D17AF2400D95D48 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF48C612D17AF2400D95D48 /* CoreDataManager.swift */; };
+		3AF48C672D181FCA00D95D48 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF48C662D181FCA00D95D48 /* NetworkMonitor.swift */; };
+		3AF48C692D18200C00D95D48 /* NetworkStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF48C682D18200C00D95D48 /* NetworkStatusView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,14 +42,11 @@
 		3ABB94E52D16E2B4000D6142 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3ABB94E72D16E2B5000D6142 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3ABB94EA2D16E2B5000D6142 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		3ABB94EC2D16E2B5000D6142 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		3ABB94EF2D16E2B5000D6142 /* chatzy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = chatzy.xcdatamodel; sourceTree = "<group>"; };
 		3ABB94F72D16E332000D6142 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3ABB94FA2D16E371000D6142 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		3ABB94FF2D16E40C000D6142 /* SocketIOManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketIOManager.swift; sourceTree = "<group>"; };
+		3ABB94FF2D16E40C000D6142 /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
 		3ABB95022D16E43E000D6142 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		3ABB95062D16E527000D6142 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
-		3ABB95082D16E58D000D6142 /* WebSocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketService.swift; sourceTree = "<group>"; };
 		3ABB950C2D16E8EA000D6142 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		3ABB950E2D16E92A000D6142 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		3ABB95102D16E93B000D6142 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
@@ -50,6 +54,17 @@
 		3ABB95152D16E9C4000D6142 /* ChatDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetailView.swift; sourceTree = "<group>"; };
 		3ABB95182D16E9FB000D6142 /* MessageBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBubble.swift; sourceTree = "<group>"; };
 		3ABB951A2D16EA21000D6142 /* ConversationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationRow.swift; sourceTree = "<group>"; };
+		3ABB951C2D170BEE000D6142 /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
+		3ABB951E2D170C1F000D6142 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		3ABB95202D170C4F000D6142 /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
+		3ABB95222D1710BF000D6142 /* NewConversationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationsView.swift; sourceTree = "<group>"; };
+		3ABB95252D1721B6000D6142 /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
+		3AF48C5B2D17397800D95D48 /* Date+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Utils.swift"; sourceTree = "<group>"; };
+		3AF48C5E2D17A90600D95D48 /* ChatzyApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChatzyApp.xcdatamodel; sourceTree = "<group>"; };
+		3AF48C612D17AF2400D95D48 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		3AF48C632D181DC700D95D48 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3AF48C662D181FCA00D95D48 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		3AF48C682D18200C00D95D48 /* NetworkStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatusView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,16 +98,18 @@
 		3ABB94E22D16E2B4000D6142 /* chatzy */ = {
 			isa = PBXGroup;
 			children = (
+				3AF48C642D181E4E00D95D48 /* resources */,
+				3AF48C602D17AEFE00D95D48 /* persistence */,
+				3AF48C5A2D17396100D95D48 /* utils */,
+				3ABB95242D172193000D6142 /* extensions */,
 				3ABB950A2D16E8D2000D6142 /* views */,
 				3ABB95012D16E422000D6142 /* viewmodels */,
 				3ABB94F92D16E35E000D6142 /* services */,
 				3ABB94F62D16E30E000D6142 /* models */,
-				3ABB94E32D16E2B4000D6142 /* chatzyApp.swift */,
-				3ABB94E52D16E2B4000D6142 /* ContentView.swift */,
+				3AF48C652D181EB100D95D48 /* app */,
 				3ABB94E72D16E2B5000D6142 /* Assets.xcassets */,
-				3ABB94EC2D16E2B5000D6142 /* Persistence.swift */,
-				3ABB94EE2D16E2B5000D6142 /* chatzy.xcdatamodeld */,
 				3ABB94E92D16E2B5000D6142 /* Preview Content */,
+				3AF48C632D181DC700D95D48 /* README.md */,
 			);
 			path = chatzy;
 			sourceTree = "<group>";
@@ -109,6 +126,9 @@
 			isa = PBXGroup;
 			children = (
 				3ABB94F72D16E332000D6142 /* User.swift */,
+				3ABB951C2D170BEE000D6142 /* Conversation.swift */,
+				3ABB951E2D170C1F000D6142 /* Message.swift */,
+				3ABB95202D170C4F000D6142 /* ApiResponse.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -117,7 +137,8 @@
 			isa = PBXGroup;
 			children = (
 				3ABB94FA2D16E371000D6142 /* NetworkService.swift */,
-				3ABB94FF2D16E40C000D6142 /* SocketIOManager.swift */,
+				3ABB94FF2D16E40C000D6142 /* SocketService.swift */,
+				3AF48C662D181FCA00D95D48 /* NetworkMonitor.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -127,7 +148,6 @@
 			children = (
 				3ABB95022D16E43E000D6142 /* ChatViewModel.swift */,
 				3ABB95062D16E527000D6142 /* AuthViewModel.swift */,
-				3ABB95082D16E58D000D6142 /* WebSocketService.swift */,
 			);
 			path = viewmodels;
 			sourceTree = "<group>";
@@ -157,6 +177,7 @@
 			children = (
 				3ABB95132D16E997000D6142 /* ConversationsView.swift */,
 				3ABB95152D16E9C4000D6142 /* ChatDetailView.swift */,
+				3ABB95222D1710BF000D6142 /* NewConversationsView.swift */,
 			);
 			path = chat;
 			sourceTree = "<group>";
@@ -166,8 +187,50 @@
 			children = (
 				3ABB95182D16E9FB000D6142 /* MessageBubble.swift */,
 				3ABB951A2D16EA21000D6142 /* ConversationRow.swift */,
+				3AF48C682D18200C00D95D48 /* NetworkStatusView.swift */,
 			);
 			path = components;
+			sourceTree = "<group>";
+		};
+		3ABB95242D172193000D6142 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3ABB95252D1721B6000D6142 /* UserDefaults+Extension.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		3AF48C5A2D17396100D95D48 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				3AF48C5B2D17397800D95D48 /* Date+Utils.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		3AF48C602D17AEFE00D95D48 /* persistence */ = {
+			isa = PBXGroup;
+			children = (
+				3AF48C612D17AF2400D95D48 /* CoreDataManager.swift */,
+			);
+			path = persistence;
+			sourceTree = "<group>";
+		};
+		3AF48C642D181E4E00D95D48 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				3AF48C5D2D17A90600D95D48 /* ChatzyApp.xcdatamodeld */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		3AF48C652D181EB100D95D48 /* app */ = {
+			isa = PBXGroup;
+			children = (
+				3ABB94E52D16E2B4000D6142 /* ContentView.swift */,
+				3ABB94E32D16E2B4000D6142 /* chatzyApp.swift */,
+			);
+			name = app;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,22 +310,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				3ABB95072D16E527000D6142 /* AuthViewModel.swift in Sources */,
-				3ABB94ED2D16E2B5000D6142 /* Persistence.swift in Sources */,
+				3ABB95232D1710BF000D6142 /* NewConversationsView.swift in Sources */,
 				3ABB94E62D16E2B4000D6142 /* ContentView.swift in Sources */,
+				3AF48C692D18200C00D95D48 /* NetworkStatusView.swift in Sources */,
 				3ABB95112D16E93B000D6142 /* RegisterView.swift in Sources */,
 				3ABB95032D16E43E000D6142 /* ChatViewModel.swift in Sources */,
-				3ABB94F02D16E2B5000D6142 /* chatzy.xcdatamodeld in Sources */,
-				3ABB95002D16E40C000D6142 /* SocketIOManager.swift in Sources */,
+				3AF48C622D17AF2400D95D48 /* CoreDataManager.swift in Sources */,
+				3ABB95002D16E40C000D6142 /* SocketService.swift in Sources */,
+				3AF48C5F2D17A90600D95D48 /* ChatzyApp.xcdatamodeld in Sources */,
+				3AF48C5C2D17397800D95D48 /* Date+Utils.swift in Sources */,
+				3ABB951F2D170C1F000D6142 /* Message.swift in Sources */,
 				3ABB95142D16E997000D6142 /* ConversationsView.swift in Sources */,
 				3ABB950D2D16E8EA000D6142 /* AuthView.swift in Sources */,
 				3ABB95192D16E9FB000D6142 /* MessageBubble.swift in Sources */,
-				3ABB95092D16E58D000D6142 /* WebSocketService.swift in Sources */,
 				3ABB94F82D16E332000D6142 /* User.swift in Sources */,
+				3ABB95262D1721B6000D6142 /* UserDefaults+Extension.swift in Sources */,
+				3ABB95212D170C4F000D6142 /* ApiResponse.swift in Sources */,
+				3ABB951D2D170BEE000D6142 /* Conversation.swift in Sources */,
 				3ABB951B2D16EA22000D6142 /* ConversationRow.swift in Sources */,
 				3ABB950F2D16E92A000D6142 /* LoginView.swift in Sources */,
 				3ABB95162D16E9C4000D6142 /* ChatDetailView.swift in Sources */,
 				3ABB94FB2D16E371000D6142 /* NetworkService.swift in Sources */,
 				3ABB94E42D16E2B4000D6142 /* chatzyApp.swift in Sources */,
+				3AF48C672D181FCA00D95D48 /* NetworkMonitor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,13 +559,13 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		3ABB94EE2D16E2B5000D6142 /* chatzy.xcdatamodeld */ = {
+		3AF48C5D2D17A90600D95D48 /* ChatzyApp.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				3ABB94EF2D16E2B5000D6142 /* chatzy.xcdatamodel */,
+				3AF48C5E2D17A90600D95D48 /* ChatzyApp.xcdatamodel */,
 			);
-			currentVersion = 3ABB94EF2D16E2B5000D6142 /* chatzy.xcdatamodel */;
-			path = chatzy.xcdatamodeld;
+			currentVersion = 3AF48C5E2D17A90600D95D48 /* ChatzyApp.xcdatamodel */;
+			path = ChatzyApp.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

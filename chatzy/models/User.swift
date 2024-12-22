@@ -7,12 +7,11 @@
 
 import Foundation
 
-// Models/User.swift
-struct User: Codable, Identifiable {
+struct User: Codable, Identifiable, Hashable {
     let id: Int
     let username: String
     let email: String
-    let createdAt: Date
+    let createdAt: String?
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -20,68 +19,13 @@ struct User: Codable, Identifiable {
         case email
         case createdAt = "created_at"
     }
-}
-
-// Models/Conversation.swift
-struct Conversation: Codable, Identifiable {
-    let id: Int
-    let name: String?
-    let type: ConversationType
-    let participants: [User]
-    let lastMessage: Message?
-    let createdAt: Date
-    var unreadCount: Int
     
-    enum CodingKeys: String, CodingKey {
-        case id
-        case name
-        case type
-        case participants
-        case lastMessage = "last_message"
-        case createdAt = "created_at"
-        case unreadCount = "unread_count"
+    static func == (lhs: User, rhs: User) -> Bool {
+        lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
     }
 }
 
-enum ConversationType: String, Codable {
-    case direct
-    case group
-}
-
-// Models/Message.swift
-struct Message: Codable, Identifiable, Equatable {
-    let id: Int
-    let conversationId: Int
-    let senderId: Int
-    let content: String
-    var status: MessageStatus
-    let createdAt: Date
-    let senderName: String
-    
-    enum CodingKeys: String, CodingKey {
-        case id
-        case conversationId = "conversation_id"
-        case senderId = "sender_id"
-        case content
-        case status
-        case createdAt = "created_at"
-        case senderName = "sender_name"
-    }
-}
-
-enum MessageStatus: String, Codable {
-    case sent
-    case delivered
-    case read
-}
-
-// Models/APIResponses.swift
-struct AuthResponse: Codable {
-    let user: User
-    let token: String
-}
-
-struct ErrorResponse: Codable {
-    let error: String
-    let message: String?
-}

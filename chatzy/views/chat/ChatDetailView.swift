@@ -37,13 +37,15 @@ struct ChatDetailView: View {
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .focused($isFocused)
                 
-                Button(action: sendMessage) {
+                Button(action: {
+                    Task { await sendMessage() }
+                }) {
                     Image(systemName: "paperplane.fill")
                 }
             }
             .padding()
         }
-        .navigationTitle(conversation.name ?? "Chat")
+        .navigationTitle(conversation.displayName)
         .task {
             await viewModel.joinConversation(conversation.id)
         }
@@ -52,13 +54,28 @@ struct ChatDetailView: View {
         }
     }
     
-    private func sendMessage() {
-        guard !messageText.isEmpty else { return }
-        viewModel.sendMessage(messageText)
+    private func sendMessage() async {
+        guard !messageText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else { return }
+        await viewModel.sendMessage(messageText)
         messageText = ""
     }
 }
 
 #Preview {
-    ChatDetailView(conversation: Conversation(id: 4, name: "Test", type: .direct, participants: [], lastMessage: nil, createdAt: Date.now, unreadCount: 5))
+    ChatDetailView(conversation: Conversation(
+        id: 1,
+        name: "Test Group",
+        type: .group,
+        createdAt: "2024-12-21 16:05:58",
+        lastMessage: "Hello World",
+        lastMessageTime: "2024-12-21 16:05:58",
+        lastMessageSenderId: 1,
+        lastMessageSenderName: "User",
+        participantCount: 3,
+        unreadCount: 2,
+        participants: [
+            User(id: 1, username: "User1", email: "user1@example.com", createdAt: ""),
+            User(id: 2, username: "User2", email: "user2@example.com", createdAt: "")
+        ]
+    ))
 }

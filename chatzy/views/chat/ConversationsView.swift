@@ -39,8 +39,8 @@ struct ConversationsView: View {
                 }
             }
             .sheet(isPresented: $showingNewConversation) {
-//                NewConversationView()
-//                    .environmentObject(viewModel)
+                NewConversationsView()
+                    .environmentObject(viewModel)
             }
         }
         .task {

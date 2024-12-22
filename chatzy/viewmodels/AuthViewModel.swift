@@ -1,10 +1,3 @@
-//
-//  AuthViewModel.swift
-//  chatzy
-//
-//  Created by Emmanuel Biju on 21/12/24.
-//
-
 import SwiftUI
 
 @MainActor
@@ -17,6 +10,34 @@ class AuthViewModel: ObservableObject {
     private let networkService = NetworkService.shared
     private let socketService = SocketService.shared
     
+    // Add UserDefaults keys
+    private enum UserDefaultsKeys {
+        static let userId = "userId"
+        static let authToken = "authToken"
+    }
+    
+    init() {
+        if let token = UserDefaults.standard.authToken {
+            networkService.setAuthToken(token)
+            loadSavedUser()
+        }
+    }
+    
+    private func loadSavedUser() {
+        if let userId = UserDefaults.standard.userId {
+            Task {
+                do {
+                    let user: User = try await networkService.request("/users/\(userId)")
+                    self.currentUser = user
+                    self.isAuthenticated = true
+                    socketService.connect(token: UserDefaults.standard.authToken ?? "")
+                } catch {
+                    self.logout()
+                }
+            }
+        }
+    }
+    
     func login(email: String, password: String) async {
         isLoading = true
         error = nil
@@ -28,6 +49,9 @@ class AuthViewModel: ObservableObject {
                 body: ["email": email, "password": password]
             )
             
+            UserDefaults.standard.userId = response.user.id
+            UserDefaults.standard.authToken = response.token
+            
             networkService.setAuthToken(response.token)
             currentUser = response.user
             isAuthenticated = true
@@ -38,6 +62,15 @@ class AuthViewModel: ObservableObject {
         
         isLoading = false
     }
+    
+    func logout() {
+        UserDefaults.standard.clearAuthData()
+        socketService.disconnect()
+        isAuthenticated = false
+        currentUser = nil
+    }
+    
+    
     
     func register(username: String, email: String, password: String) async {
         isLoading = true
@@ -54,6 +87,10 @@ class AuthViewModel: ObservableObject {
                 ]
             )
             
+            // Save user data
+            UserDefaults.standard.setValue(response.user.id, forKey: UserDefaultsKeys.userId)
+            UserDefaults.standard.setValue(response.token, forKey: UserDefaultsKeys.authToken)
+            
             networkService.setAuthToken(response.token)
             currentUser = response.user
             isAuthenticated = true
@@ -63,11 +100,5 @@ class AuthViewModel: ObservableObject {
         }
         
         isLoading = false
-    }
-    
-    func logout() {
-        socketService.disconnect()
-        isAuthenticated = false
-        currentUser = nil
     }
 }

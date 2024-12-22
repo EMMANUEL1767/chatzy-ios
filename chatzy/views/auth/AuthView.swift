@@ -13,6 +13,10 @@ struct AuthView: View {
     var body: some View {
         NavigationView {
             VStack {
+                Text("Chatzy")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .foregroundColor(.blue)
                 Picker("", selection: $isShowingLogin) {
                     Text("Login").tag(true)
                     Text("Register").tag(false)
@@ -25,8 +29,9 @@ struct AuthView: View {
                 } else {
                     RegisterView()
                 }
+                
+                
             }
-            .navigationTitle("Chat App")
         }
     }
 }
