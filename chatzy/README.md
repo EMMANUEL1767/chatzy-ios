@@ -17,7 +17,7 @@ A SwiftUI chat application implementing real-time messaging using Socket.IO.
 ChatApp/
 ├── App/
 │   └── ChatzyApp.swift      # App entry point
-|   └── COntentView.swift
+|   └── ContentView.swift
 ├── Models/
 │   ├── User.swift           # User model
 │   ├── Message.swift        # Message model
@@ -32,6 +32,7 @@ ChatApp/
 ├── Services/
 │   ├── NetworkService.swift # API client
 │   └── SocketService.swift  # Socket.IO handling
+|   └── NetworkMonitor.swift # Monitoring Network Connectivity
 ├── Persistence/
 │   └── CoreDataManager.swift # Local storage
 └── Resources/
@@ -57,9 +58,15 @@ git clone https://github.com/EMMANUEL1767/chatzy-ios
 - File > Add Packages
 - Add Socket.IO-Client-Swift: `https://github.com/socketio/socket.io-client-swift`
 
-3. Update `Constants` with your server URL
+3. Clone the backend repository:
+```bash
+git clone https://github.com/EMMANUEL1767/chatzy-backend
+```
+- Follow the documentation for backend repo to run the backend and socket services
 
-4. Build and run the project
+4. Update `Constants` with your server URL
+
+5. Build and run the project
 
 ## Features
 
@@ -75,6 +82,7 @@ git clone https://github.com/EMMANUEL1767/chatzy-ios
 - Typing indicators
 - Offline message queueing
 - Message persistence
+- Network Indicator
 
 ### User Experience
 - Clean, minimal native iOS design
@@ -155,6 +163,9 @@ entity Message {
 - `user_typing`
 - `user_stopped_typing`
 - `message_error`
+- `message_sent`
+- `authenticated`
+- `unauthorized`
 
 ## Network Handling
 
@@ -210,6 +221,7 @@ let config: SocketIOClientConfiguration = [
 - Handle Socket.IO reconnection edge cases
 - Improve offline message queueing
 - Optimize Core Data fetch requests
+- Improve Read Receipts
 
 ## Future Improvements
 
@@ -219,13 +231,6 @@ let config: SocketIOClientConfiguration = [
 - Enhanced group chat features
 - End-to-end encryption
 
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
 
 ## License
 
