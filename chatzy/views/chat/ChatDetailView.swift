@@ -32,10 +32,23 @@ struct ChatDetailView: View {
                 }
             }
             
+            if !viewModel.typingUsers.isEmpty {
+                HStack {
+                    Text(typingIndicatorText)
+                        .font(.caption)
+                        .foregroundColor(.gray)
+                        .padding(.horizontal)
+                    Spacer()
+                }
+            }
+            
             HStack {
-                TextField("Message", text: $messageText)
+                TextField("Type your message", text: $messageText)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .focused($isFocused)
+                    .onChange(of: messageText) { _ in
+                        viewModel.startTyping()
+                    }
                 
                 Button(action: {
                     Task { await sendMessage() }
@@ -51,6 +64,19 @@ struct ChatDetailView: View {
         }
         .onChange(of: isFocused) { focused in
             viewModel.updateTypingStatus(isTyping: focused)
+        }
+    }
+    
+    private var typingIndicatorText: String {
+        switch viewModel.typingUsers.count {
+        case 0:
+            return ""
+        case 1:
+            return "\(viewModel.typingUsers.first!) is typing..."
+        case 2:
+            return "\(viewModel.typingUsers.joined(separator: " and ")) are typing..."
+        default:
+            return "Several people are typing..."
         }
     }
     

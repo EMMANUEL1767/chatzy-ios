@@ -13,7 +13,7 @@ class SocketService {
     
     private var manager: SocketManager?
     private var socket: SocketIOClient?
-    
+    @Published var typingUsers: Set<String> = []
     @Published var isConnected = false
     
     private init() {}
@@ -226,6 +226,17 @@ class SocketService {
     private func handleTypingStatus(_ typingData: [String: Any], isTyping: Bool = true) {
         var userInfo = typingData
         userInfo["isTyping"] = isTyping
+        if let username = userInfo["username"] as? String {
+            if isTyping {
+                DispatchQueue.main.async {
+                    self.typingUsers.insert(username)
+                }
+            } else {
+                DispatchQueue.main.async {
+                    self.typingUsers.remove(username)
+                }
+            }
+        }
         NotificationCenter.default.post(
             name: .typingStatusChanged,
             object: nil,

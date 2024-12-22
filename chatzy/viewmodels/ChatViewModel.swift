@@ -15,10 +15,11 @@ class ChatViewModel: ObservableObject {
     @Published var error: String?
     @Published var isLoading = false
     @Published var typingUsers: Set<String> = []
-    
+    private var messageStatusObserver: NSObjectProtocol?
+    private var observedConversationId: Int?
     private var currentConversationId: Int?
     private var cancellables = Set<AnyCancellable>()
-    
+    private var typingDebouncer: Timer?
     private let networkService = NetworkService.shared
     private let socketService = SocketService.shared
     private let coreDataManager = CoreDataManager.shared
@@ -29,6 +30,10 @@ class ChatViewModel: ObservableObject {
     }
     
     private func setupNotificationObservers() {
+        socketService.$typingUsers
+            .receive(on: RunLoop.main)
+            .assign(to: &$typingUsers)
+        
         NotificationCenter.default.publisher(for: .newMessageReceived)
             .compactMap { $0.userInfo?["messageData"] as? [String: Any] }
             .receive(on: DispatchQueue.main)
@@ -36,20 +41,20 @@ class ChatViewModel: ObservableObject {
                 self?.handleNewMessage(messageData)
             }
             .store(in: &cancellables)
-        NotificationCenter.default.publisher(for: .messageStatusUpdated)
-            .compactMap { notification -> (Int, MessageStatus)? in
-                guard let userInfo = notification.userInfo,
-                      let messageId = userInfo["messageId"] as? Int,
-                      let status = userInfo["status"] as? MessageStatus else {
-                    return nil
-                }
-                return (messageId, status)
+        
+        messageStatusObserver = NotificationCenter.default.addObserver(
+            forName: .messageStatusUpdated,
+            object: nil,
+            queue: .main
+        ) { [weak self] notification in
+            guard let messageId = notification.userInfo?["messageId"] as? Int,
+                  let status = notification.userInfo?["status"] as? MessageStatus else { return }
+            
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
+                self.updateMessageStatus(messageId: messageId, status: status)
             }
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] messageId, status in
-                self?.updateMessageStatus(messageId: messageId, status: status)
-            }
-            .store(in: &cancellables)
+        }
         
         // Handle message sent confirmation
         NotificationCenter.default.publisher(for: .messageSent)
@@ -306,7 +311,7 @@ class ChatViewModel: ObservableObject {
         }
     }
     
-    private func updateMessageStatus(messageId: Int, status: MessageStatus) {
+    private func updateMessageStatus(messageId: Int, status: MessageStatus = .sent) {
         if let index = currentMessages.firstIndex(where: { $0.id == messageId }) {
             currentMessages[index].status = status
         }
@@ -328,4 +333,47 @@ class ChatViewModel: ObservableObject {
             socketService.markMessageAsRead(message.id)
         }
     }
+    
+    func observeTyping(for conversationId: Int) {
+        observedConversationId = conversationId
+        socketService.joinConversation(conversationId)
+    }
+    
+    func stopObservingTyping(for conversationId: Int) {
+        if observedConversationId == conversationId {
+            observedConversationId = nil
+            socketService.leaveConversation(conversationId)
+        }
+    }
+    
+    func startTyping() {
+        guard let conversationId = currentConversationId else { return }
+        
+        // Cancel existing timer
+        typingDebouncer?.invalidate()
+        
+        // Emit typing start
+        socketService.startTyping(in: conversationId)
+        
+        // Set timer to stop typing after 3 seconds
+        typingDebouncer = Timer.scheduledTimer(withTimeInterval: 3.0, repeats: false) { [weak self] _ in
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
+                self.stopTyping()
+            }
+        }
+    }
+    
+    func stopTyping() {
+        guard let conversationId = currentConversationId else { return }
+        socketService.stopTyping(in: conversationId)
+    }
+    
+    deinit {
+        if let observer = messageStatusObserver {
+            NotificationCenter.default.removeObserver(observer)
+        }
+        typingDebouncer?.invalidate()
+    }
+
 }
