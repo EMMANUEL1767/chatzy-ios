@@ -66,7 +66,7 @@ class SocketService {
             print("Socket authentication failed:", data)
         }
         
-        socket?.on("typing_start") { [weak self] data, ack in
+        socket?.on("user_typing") { [weak self] data, ack in
             guard let typingData = data.first as? [String: Any] else { return }
             self?.handleTypingStatus(typingData, isTyping: true)
             
@@ -134,7 +134,7 @@ class SocketService {
             self?.handleMessageStatus(statusData)
         }
         
-        socket?.on("typing_stop") { [weak self] data, ack in
+        socket?.on("user_stopped_typing") { [weak self] data, ack in
             guard let typingData = data.first as? [String: Any] else { return }
             self?.handleTypingStatus(typingData, isTyping: false)
         }

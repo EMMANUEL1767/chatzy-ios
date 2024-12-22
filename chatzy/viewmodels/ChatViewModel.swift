@@ -309,14 +309,12 @@ class ChatViewModel: ObservableObject {
     private func updateMessageStatus(messageId: Int, status: MessageStatus) {
         if let index = currentMessages.firstIndex(where: { $0.id == messageId }) {
             currentMessages[index].status = status
-            self.objectWillChange.send()
         }
     }
     
     private func handleMessageSent(messageId: Int, status: MessageStatus) {
         if let index = currentMessages.firstIndex(where: { $0.id == messageId }) {
             currentMessages[index].status = status
-            self.objectWillChange.send()
         }
     }
     

@@ -65,6 +65,7 @@
 		3AF48C632D181DC700D95D48 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3AF48C662D181FCA00D95D48 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		3AF48C682D18200C00D95D48 /* NetworkStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatusView.swift; sourceTree = "<group>"; };
+		3AF48C6C2D18519A00D95D48 /* Documentation.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Documentation.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +111,7 @@
 				3ABB94E72D16E2B5000D6142 /* Assets.xcassets */,
 				3ABB94E92D16E2B5000D6142 /* Preview Content */,
 				3AF48C632D181DC700D95D48 /* README.md */,
+				3AF48C6C2D18519A00D95D48 /* Documentation.md */,
 			);
 			path = chatzy;
 			sourceTree = "<group>";
