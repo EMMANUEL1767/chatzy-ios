@@ -14,13 +14,27 @@ struct ConversationsView: View {
     
     var body: some View {
         NavigationView {
-            List {
-                ForEach(viewModel.conversations) { conversation in
-                    NavigationLink {
-                        ChatDetailView(conversation: conversation)
-                            .environmentObject(viewModel)
+            VStack {
+                if viewModel.conversations.isEmpty {
+                    Text("No conversations yet. Start making friends.")
+                    Button {
+                        showingNewConversation = true
                     } label: {
-                        ConversationRow(conversation: conversation)
+                        Text("Start Now")
+                            .font(.title3)
+                            .fontWeight(.semibold)
+                    }
+
+                } else {
+                    List {
+                        ForEach(viewModel.conversations) { conversation in
+                            NavigationLink {
+                                ChatDetailView(conversation: conversation)
+                                    .environmentObject(viewModel)
+                            } label: {
+                                ConversationRow(conversation: conversation)
+                            }
+                        }
                     }
                 }
             }

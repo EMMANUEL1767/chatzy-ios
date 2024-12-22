@@ -30,7 +30,7 @@ class SocketService {
         
         // Initialize manager and socket
         manager = SocketManager(
-            socketURL: URL(string: "https://58b5-157-46-1-45.ngrok-free.app")!,
+            socketURL: URL(string: Constants.socketURL)!,
             config: config
         )
         

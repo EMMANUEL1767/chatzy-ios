@@ -8,8 +8,8 @@
 import Foundation
 
 enum Constants {
-    static let baseURL = "https://58b5-157-46-1-45.ngrok-free.app/api"
-    static let socketURL = "https://58b5-157-46-1-45.ngrok-free.app"
+    static let baseURL = "https://chatzy-backend-production.up.railway.app/api"
+    static let socketURL = "https://chatzy-backend-production.up.railway.app"
 }
 
 enum NetworkError: Error {
