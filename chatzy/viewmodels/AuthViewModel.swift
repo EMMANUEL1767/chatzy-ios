@@ -62,7 +62,13 @@ class AuthViewModel: ObservableObject {
             isAuthenticated = true
             socketService.connect(token: response.token)
         } catch {
-            self.error = error.localizedDescription
+            switch error {
+                case NetworkError.serverError(let message):
+                    self.error = message
+                default:
+                    self.error = error.localizedDescription
+            }
+        
         }
         
         isLoading = false
@@ -110,7 +116,12 @@ class AuthViewModel: ObservableObject {
             isAuthenticated = true
             socketService.connect(token: response.token)
         } catch {
-            self.error = error.localizedDescription
+            switch error {
+                case NetworkError.serverError(let message):
+                    self.error = message
+                default:
+                    self.error = error.localizedDescription
+            }
         }
         
         isLoading = false

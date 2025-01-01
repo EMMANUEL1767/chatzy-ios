@@ -128,8 +128,8 @@ struct NewConversationsView: View {
     }
     
     private var canCreateConversation: Bool {
-        if conversationType == .direct, viewModel.conversations.filter({ $0.participants.contains(where: { $0.id == selectedUsers.first?.id }) }).isEmpty {
-            return selectedUsers.count == 1
+        if conversationType == .direct, selectedUsers.count == 1 {
+            return viewModel.conversations.filter({ $0.type == .direct && $0.participants.contains(where: { $0.id == selectedUsers.first?.id }) }).isEmpty
         } else {
             return !selectedUsers.isEmpty && !name.isEmpty
         }
@@ -151,7 +151,12 @@ struct NewConversationsView: View {
                     isSearching = true
                 }
             } catch {
-                errorMessage = error.localizedDescription
+                switch error {
+                    case NetworkError.serverError(let message):
+                        self.errorMessage = message
+                    default:
+                        self.errorMessage = error.localizedDescription
+                }
             }
         }
     }
@@ -173,7 +178,12 @@ struct NewConversationsView: View {
                     dismiss()
                 }
             } catch {
-                errorMessage = error.localizedDescription
+                switch error {
+                    case NetworkError.serverError(let message):
+                        self.errorMessage = message
+                    default:
+                        self.errorMessage = error.localizedDescription
+                }
             }
             isLoading = false
         }

@@ -20,6 +20,25 @@ enum NetworkError: Error {
     case serverError(String)
     case unknown
     case notConnected
+    
+    var errorDescription: String? {
+        switch self {
+        case .invalidURL:
+            return "Invalid URL"
+        case .invalidResponse:
+            return "Invalid response from server"
+        case .unauthorized:
+            return "Unauthorized access"
+        case .decodingError:
+            return "Failed to decode response"
+        case .serverError(let message):
+            return message
+        case .unknown:
+            return "An unknown error occurred"
+        case .notConnected:
+            return "You are not connected to internet"
+        }
+    }
 }
 
 class NetworkService {
@@ -82,8 +101,7 @@ class NetworkService {
                 }
                 throw NetworkError.decodingError
             }
-        case 401:
-            throw NetworkError.unauthorized
+
         default:
             if let error = try? JSONDecoder().decode(ErrorResponse.self, from: data) {
                 throw NetworkError.serverError(error.message ?? error.error)

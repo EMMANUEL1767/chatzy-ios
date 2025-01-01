@@ -118,7 +118,12 @@ class ChatViewModel: ObservableObject {
             try await sendQueuedMessages()
             
         } catch {
-            self.error = error.localizedDescription
+            switch error {
+                case NetworkError.serverError(let message):
+                    self.error = message
+                default:
+                    self.error = error.localizedDescription
+            }
         }
         
         isLoading = false
@@ -252,7 +257,12 @@ class ChatViewModel: ObservableObject {
             let messages: [Message] = try await networkService.request("/chat/conversations/\(conversationId)/messages")
             currentMessages = messages.sorted(by: { (DateUtils.getDate(from: $0.createdAt ?? "") ?? .now) < (DateUtils.getDate(from: $1.createdAt ?? "") ?? .now) })
         } catch {
-            self.error = error.localizedDescription
+            switch error {
+                case NetworkError.serverError(let message):
+                    self.error = message
+                default:
+                    self.error = error.localizedDescription
+            }
         }
         isLoading = false
     }
